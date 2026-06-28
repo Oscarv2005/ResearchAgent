@@ -59,7 +59,7 @@ const CAPABILITIES = [
 
 function Ticker() {
   const [items, setItems] = useState(FALLBACK_ITEMS);
-  const [status, setStatus] = useState("loading"); // loading | live | fallback
+  const [status, setStatus] = useState("loading"); 
   const intervalRef = useRef(null);
 
   const fetchQuotes = useCallback(async () => {
@@ -105,7 +105,7 @@ Use real current market data. "up" is true if change is positive.`;
 
   useEffect(() => {
     fetchQuotes();
-    // Refresh every 60 seconds
+    
     intervalRef.current = setInterval(fetchQuotes, 60_000);
     return () => clearInterval(intervalRef.current);
   }, [fetchQuotes]);
@@ -138,12 +138,12 @@ function HomePage({ queriesRun, avgSynthTime, activityFeed, onNavigate }) {
 
   return (
     <main className="home">
-      {/* ── TICKER ── */}
+     
       <Ticker />
 
-      {/* ── HERO ── */}
+    
       <section className="hero">
-        {/* LEFT */}
+       
         <div className="hero-left">
           <div className="hero-left-inner">
             <div className="tag-row">
@@ -204,7 +204,7 @@ function HomePage({ queriesRun, avgSynthTime, activityFeed, onNavigate }) {
           </div>
         </div>
 
-        {/* RIGHT — live feed */}
+        
         <div className="hero-right">
           <div className="hero-panel-header">
             <span className="live-badge">
@@ -213,7 +213,7 @@ function HomePage({ queriesRun, avgSynthTime, activityFeed, onNavigate }) {
             <span className="hero-card-label">Agent activity</span>
           </div>
 
-          {/* Pipeline */}
+       
           <div className="pipeline">
             <div className="pipeline-title">Node pipeline</div>
             <div className="pipeline-nodes">
@@ -230,7 +230,7 @@ function HomePage({ queriesRun, avgSynthTime, activityFeed, onNavigate }) {
             </div>
           </div>
 
-          {/* Activity */}
+          
           {activityFeed.length === 0 ? (
             <div className="activity-empty">
               <div className="activity-empty-inner">
@@ -266,7 +266,7 @@ function HomePage({ queriesRun, avgSynthTime, activityFeed, onNavigate }) {
         </div>
       </section>
 
-      {/* ── CAPABILITIES ── */}
+      
       <section className="features">
         <div className="features-grid">
           {CAPABILITIES.map((f) => (
