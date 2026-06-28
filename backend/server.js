@@ -25,5 +25,9 @@ app.post("/api/research", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "online", message: "Research Agent API is active" });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
