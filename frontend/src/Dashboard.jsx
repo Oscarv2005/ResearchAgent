@@ -9,7 +9,7 @@ function Dashboard({ researchData }) {
 
   return (
     <div className="dashboard-wrapper">
-      {/* SIDEBAR */}
+   
       <div className="dashboard-sidebar">
         <div>
           <div className="sidebar-label">Report</div>
@@ -78,7 +78,7 @@ function Dashboard({ researchData }) {
         </div>
       </div>
 
-      {/* MAIN CONTENT */}
+     
       <div className="dashboard-main">
         <div className="dashboard-topbar">
           <span className="dashboard-title">Research Analysis</span>
