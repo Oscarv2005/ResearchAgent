@@ -29,7 +29,7 @@ function Agent({ onResult, onError, onQueryStart }) {
 
   return (
     <div className="agent-wrapper">
-      {/* LEFT — context panel */}
+      
       <div className="agent-left">
         <div className="agent-left-top">
           <div className="eyebrow" style={{ marginBottom: "1.5rem" }}>
@@ -75,7 +75,7 @@ function Agent({ onResult, onError, onQueryStart }) {
         </div>
       </div>
 
-      {/* RIGHT — input */}
+     
       <div className="agent-right">
         <div className="agent-container">
           <div className="agent-title">Query Input</div>
