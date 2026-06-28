@@ -50,7 +50,6 @@ function Nav({ onNavigate, activeView }) {
         </div>
       </header>
 
-      {/* Mobile drawer */}
       {menuOpen && (
         <div className="mobile-menu">
           {[
